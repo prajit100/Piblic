@@ -1,6 +1,6 @@
 <?php
   // Import the PHP Email Form library
-  require_once __DIR__ . '/../assets/vendor/php-email-form/php-email-form.php';
+require_once __DIR__ . '/../../assets/vendor/php-email-form/php-email-form.php';
 
   // Replace contact@example.com with your real receiving email address
   $receiving_email_address = 'prajitgiri1221@gmail.com';
