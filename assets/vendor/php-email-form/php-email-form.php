@@ -494,18 +494,7 @@ class PHPMailer
      */
     public $MessageDate = '';
 
-    /**
-     * SMTP hosts.
-     * Either a single hostname or multiple semicolon-delimited hostnames.
-     * You can also specify a different port
-     * for each host by using this format: [hostname:port]
-     * (e.g. "smtp1.example.com:25;smtp2.example.com").
-     * You can also specify encryption type, for example:
-     * (e.g. "tls://smtp1.example.com:587;ssl://smtp2.example.com:465").
-     * Hosts will be tried in order.
-     *
-     * @var string
-     */
+   
     public $Host = 'localhost';
 
     /**
@@ -660,15 +649,7 @@ class PHPMailer
      */
     public $Debugoutput = 'echo';
 
-    /**
-     * Whether to keep the SMTP connection open after each message.
-     * If this is set to true then the connection will remain open after a send,
-     * and closing the connection will require an explicit call to smtpClose().
-     * It's a good idea to use this if you are sending multiple messages as it reduces overhead.
-     * See the mailing list example for how to use it.
-     *
-     * @var bool
-     */
+  
     public $SMTPKeepAlive = false;
 
     /**
