@@ -3,6 +3,17 @@ const ctx = canvas.getContext('2d');
 let drawing = false;
 let penColor = '#000000';
 
+// Adjust canvas size
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
+
+function resizeCanvas() {
+    const ratio = Math.max(window.devicePixelRatio || 1, 1);
+    canvas.width = canvas.clientWidth * ratio;
+    canvas.height = canvas.clientHeight * ratio;
+    ctx.scale(ratio, ratio);
+}
+
 canvas.addEventListener('mousedown', startDrawing);
 canvas.addEventListener('mouseup', stopDrawing);
 canvas.addEventListener('mousemove', draw);
