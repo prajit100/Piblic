@@ -8,7 +8,6 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  
   <style>
     body, html {
       margin: 0;
@@ -16,7 +15,7 @@
       height: 100%;
       overflow: hidden;
     }
-    
+
     video {
       position: absolute;
       top: 0;
@@ -25,12 +24,24 @@
       height: 100%;
       object-fit: cover;
     }
+
+    /* Ensure video scales well on mobile phones */
+    @media (max-width: 768px) {
+      video {
+        object-fit: contain;
+      }
+    }
+
+    /* Prevent double-tap zoom on mobile */
+    body {
+      touch-action: manipulation;
+    }
   </style>
 </head>
 
 <body>
-  <video autoplay muted loop>
-    <source src="_website_lunch-main - Shortcut.mp4" type="video/mp4">
+  <video autoplay muted loop playsinline>
+    <source src="cover.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </body>
